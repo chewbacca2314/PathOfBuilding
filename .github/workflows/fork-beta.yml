@@ -34,7 +34,7 @@ jobs:
         run: |
           git worktree add --detach ../beta
           cd ../beta
-          if git fetch -q origin beta; then git checkout -q -B beta FETCH_HEAD; else git checkout -q --orphan beta; fi
+          if git fetch -q origin beta; then git checkout -q -B beta FETCH_HEAD; else git checkout -q --orphan beta && git rm -rqf .; fi
           rsync -a --delete --exclude .git --exclude .github "$GITHUB_WORKSPACE"/ ./
           git add -A
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
