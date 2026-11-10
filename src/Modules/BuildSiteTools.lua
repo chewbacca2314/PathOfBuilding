@@ -18,16 +18,16 @@ buildSites = { }
 -- linkURL: The URL pattern to link to the provided build code (Unused currently)
 buildSites.websiteList = {
 	{
+		label = "pobb.in", id = "POBBin", matchURL = "^https://pobb%.in/.+", regexURL = "pobb%.in/(.+)%s*$", downloadURL = "pobb.in/pob/%1",
+		codeOut = "https://pobb.in/", postUrl = "https://pobb.in/pob/", postFields = "", linkURL = "pobb.in/%1"
+	},
+	{
 		label = "Maxroll", id = "Maxroll", matchURL = "^https://maxroll%.gg/poe/pob/.*", regexURL = "maxroll%.gg/poe/pob/(.+)%s*$", downloadURL = "maxroll%.gg/poe/api/pob/%1",
 		codeOut = "https://maxroll.gg/poe/pob/", postUrl = "https://maxroll.gg/poe/api/pob", postFields = "pobCode=", linkURL = "maxroll%.gg/poe/pob/%1"
 	},
 	{
 		label = "pob.codes", id = "PoBCodes", matchURL = "^https://pob%.codes/b/.+", regexURL = "pob%.codes/b/([^?%s]+)[^%s]*%s*$", downloadURL = "api.pob.codes/%1/raw",
 		codeOut = "https://pob.codes/b/", postUrl = "https://api.pob.codes/pob/plain", postFields = "", linkURL = "pob.codes/b/%1"
-	},
-	{
-		label = "pobb.in", id = "POBBin", matchURL = "^https://pobb%.in/.+", regexURL = "pobb%.in/(.+)%s*$", downloadURL = "pobb.in/pob/%1",
-		codeOut = "https://pobb.in/", postUrl = "https://pobb.in/pob/", postFields = "", linkURL = "pobb.in/%1"
 	},
 	{
 		label = "PoeNinja", id = "PoeNinja", matchURL = "^https://poe%.ninja/?p?o?e?1?/pob/%w+", regexURL = "poe%.ninja/?p?o?e?1?/pob/(%w+)%s*$", downloadURL = "poe.ninja/poe1/pob/raw/%1",
